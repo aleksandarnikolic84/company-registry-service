@@ -16,8 +16,6 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <docker.username>acadetla</docker.username>
-        <docker.token>dckr_pat_ac2-TUAsXu685cX5xBfwcBuV4CU</docker.token>
     </properties>
 
     <dependencies>
