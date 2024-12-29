@@ -1,0 +1,17 @@
+spring:
+  # ===================================================================
+  # Datasource
+  # ===================================================================
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://company-registry-postgresql:5432/CompanyRegistry
+    username: CompanyRegistry
+    name:
+    password:
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+
