@@ -18,7 +18,7 @@
         <repository>
             <id>github</id>
             <url>
-                https://aleksandarnikolic84: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@maven.pkg.github.com/aleksandarnikolic84/company-registry-service-api-schema
+                https://aleksandarnikolic84:TOKEN@maven.pkg.github.com/aleksandarnikolic84/company-registry-service-api-schema
             </url>
             <releases>
                 <enabled>true</enabled>
