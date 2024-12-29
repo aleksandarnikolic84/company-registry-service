@@ -45,8 +45,6 @@
         <archunit-junit5.version>1.2.2</archunit-junit5.version>
         <tomcat-embed.version>10.1.34</tomcat-embed.version>
         <logback.version>1.5.12</logback.version>
-        <docker.username>acadetla</docker.username>
-        <docker.token>dckr_pat_ac2-TUAsXu685cX5xBfwcBuV4CU</docker.token>
     </properties>
     <dependencyManagement>
         <dependencies>
