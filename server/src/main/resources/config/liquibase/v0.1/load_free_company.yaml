@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: load_free_company_data
+      author: aleksandar.nikolic
+      changes:
+        - loadData:
+            tableName: free_company
+            file:   config/liquibase/v0.1/data/free_company.csv
+            columns:
+              - column:
+                  name: cin
+                  type: string
+              - column:
+                  name: name
+                  type: string
+              - column:
+                  name: registration_date
+                  type: date
+              - column:
+                  name: address
+                  type: VARCHAR
+              - column:
+                  name: is_active
+                  type: BOOLEAN
+              - column:
+                  name: created_time
+                  type: TIMESTAMP

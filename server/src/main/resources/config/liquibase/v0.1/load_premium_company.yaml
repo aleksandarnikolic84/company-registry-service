@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: load_premium_company_data
+      author: aleksandar.nikolic
+      changes:
+        - loadData:
+            tableName: premium_company
+            file:   config/liquibase/v0.1/data/premium_company.csv
+            columns:
+              - column:
+                  name: company_identification_number
+                  type: string
+                  header: companyIdentificationNumber
+              - column:
+                  name: company_name
+                  type: string
+                  header: companyName
+              - column:
+                  name: registration_date
+                  type: date
+                  header: registrationDate
+              - column:
+                  name: full_address
+                  type: VARCHAR
+                  header: fullAddress
+              - column:
+                  name: is_active
+                  type: BOOLEAN
+                  header: isActive
+              - column:
+                  name: created_time
+                  type: TIMESTAMP
+                  header: createdTime

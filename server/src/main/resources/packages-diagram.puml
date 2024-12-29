@@ -1,0 +1,16 @@
+@startuml
+' Packages
+[Service Layer] <<com.incode.companyregistryservice.service.impl..>> <<com.incode.companyregistryservice.service.mapper..>> as service
+[Service Api] <<com.incode.companyregistryservice.service.api..>> as api
+[Dto] <<com.incode.companyregistryservice.dto..>> as dto
+[Persistence] <<com.incode.companyregistryservice.repository..>> <<com.incode.companyregistryservice.domain..>> as persistence
+[Controllers] <<com.incode.companyregistryservice.web..>> as web
+
+' Package dependencies
+service --> persistence
+service --> dto
+service --> api
+api --> dto
+web --> dto
+web --> api
+@enduml

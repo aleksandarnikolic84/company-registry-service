@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+  company-registry-postgresql:
+    container_name: company-registry-postgresql
+    image: postgres:16.6-alpine
+    environment:
+      - POSTGRES_USER=CompanyRegistry
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432
+    networks:
+      - companyregistry
+networks:
+  companyregistry:
+    name: companyregistry
+    driver: bridge

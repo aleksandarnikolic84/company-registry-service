@@ -1,0 +1,17 @@
+spring:
+  # ===================================================================
+  # Datasource
+  # ===================================================================
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgresql:16.6-alpine:///BackendService?TC_TMPFS=/testtmpfs:rw
+    username: CompanyRegistry
+    name:
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+

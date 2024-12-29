@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-premium-company-table_1212
+      author: aleksandar.nikolic
+      changes:
+       # - createSequence:
+      #      sequenceName: premium_company_id_seq
+       #     incrementBy: 1
+       #     startValue: 1
+        - createTable:
+            tableName: premium_company
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: company_identification_number
+                  type: VARCHAR
+                  constraints:
+                    nullable: false
+              - column:
+                  name: company_name
+                  type: VARCHAR
+                  constraints:
+                    nullable: false
+              - column:
+                  name: registration_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: full_address
+                  type: VARCHAR
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_active
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_time
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_time
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: true
+        - createIndex:
+            tableName: premium_company
+            indexName: idx_premium_company_identification_number
+            columns:
+              - column:
+                  name: company_identification_number

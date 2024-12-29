@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      - file: config/liquibase/v0.1/create_free_company_table.yaml
+  - include:
+      - file: config/liquibase/v0.1/create_premium_company_table.yaml
+  - include:
+      - file: config/liquibase/v0.1/load_free_company.yaml
+  - include:
+      - file: config/liquibase/v0.1/load_premium_company.yaml
